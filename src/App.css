@@ -1,42 +1,89 @@
+:root {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-bg-third: #818c96;
+  --color-text: #333333;
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-hover: #0056b3;
+  --color-error-bg: #f8d7da;
+  --color-error-text: #721c24;
+  --color-dark-bg: #333333;
+  --color-dark-bg-secondary: #444444;
+  --color-dark-text: #ffffff;
+  --color-dark-primary: #ffcc00;
+}
+
+.dark-mode {
+  --color-bg: #000000;
+  --color-bg-secondary: #222222;
+  --color-text: #ffffff;
+  --color-primary: var(--color-dark-primary);
+  --color-error-bg: #f5c6cb;
+  --color-error-text: #f5c6cb;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 128rem;
+  margin: auto;
   padding: 2rem;
-  text-align: center;
+  font-size: var(--font-size-base-rem);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html {
+  font-size: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: auto;
+  display: flex;
+  place-items: center;
+  max-width: 120rem;
+  font-size: 1.4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input {
+  width: 40rem;
+  padding: 0.5rem;
+  border: 0.1rem solid var(--color-primary);
+  border-radius: 0.4rem;
+  transition: border-color 0.3s;
 }
 
-.card {
-  padding: 2em;
+input:hover {
+  border-color: var(--color-hover);
 }
 
-.read-the-docs {
-  color: #888;
+button {
+  font-size: 1.8rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-primary);
+  border: none;
+  color: white;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-hover);
+}
+
+.error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+}
+
+.errorButton {
+  background-color: var(--color-error-text);
+  color: white;
 }
