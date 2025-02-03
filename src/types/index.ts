@@ -20,6 +20,7 @@ export type ApiResponse = {
   pages: number;
 };
 //deneme
+//deneme2
 
 export type AppState = {
   charactersList: Character[];
