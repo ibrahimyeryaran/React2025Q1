@@ -19,6 +19,7 @@ export type ApiResponse = {
   size: number;
   pages: number;
 };
+//deneme
 
 export type AppState = {
   charactersList: Character[];
